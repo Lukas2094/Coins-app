@@ -44,6 +44,18 @@ async function fetchCryptos(page = 1) {
     }
 }
 
+async function atualizarDadosCripto() {
+    const dadosAtualizados = await fetchCryptos(1);
+
+    clients.forEach((ws) => {
+        if (ws.readyState === ws.OPEN) {
+            ws.send(JSON.stringify(dadosAtualizados));
+        }
+    });
+}
+
+setInterval(atualizarDadosCripto, 30000);
+
 wss.on('connection', (ws) => {
     console.log('Novo cliente conectado');
     clients.add(ws);

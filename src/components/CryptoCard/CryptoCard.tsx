@@ -36,7 +36,7 @@ export default function CryptoTable({ cryptosIniciais, pagina }: CryptoTableProp
             };
 
             ws.onmessage = (event) => {
-                console.log('Mensagem recebida do servidor crypto:', event.data);
+                // console.log('Mensagem recebida do servidor crypto:', event.data);
                 const dados = JSON.parse(event.data);
                 setCryptos(dados);
             };

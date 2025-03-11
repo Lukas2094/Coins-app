@@ -11,7 +11,7 @@ async function getCryptos(pagina = 1) {
     `https://api.coingecko.com/api/v3/coins/markets?vs_currency=brl&order=market_cap_desc&per_page=15&page=${pagina}&sparkline=true`
   );
   if (!resposta.ok) {
-    throw new Error('Falha ao buscar dados');
+    throw new Error('Falha ao buscar dados da API');
   }
   const dados = await resposta.json();
   return dados.map((cripto: any) => ({
