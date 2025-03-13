@@ -32,7 +32,7 @@ function traduzirDadosCripto(cripto: any) {
 async function fetchCryptos(page = 1) {
     try {
         const resposta = await fetch(
-            `https://api.coingecko.com/api/v3/coins/markets?vs_currency=brl&order=market_cap_desc&per_page=10&page=${page}&sparkline=true`
+            `https://api.coingecko.com/api/v3/coins/markets?vs_currency=brl&order=market_cap_desc&per_page=100&page=${page}&sparkline=true&locale=pt`
         );
         if (!resposta.ok) throw new Error('Falha ao buscar dados');
 
@@ -108,9 +108,9 @@ function connectToServer() {
 
     });
 
-    newWs.on('message', (data) => {
-        console.log('Mensagem recebida do servidor server.ts:', data.toString());
-    });
+    // newWs.on('message', (data) => {
+    //     console.log('Mensagem recebida do servidor server.ts:', data.toString());
+    // });
 
     newWs.on('error', (error) => {
         console.error('Erro ao reconectar:', error);

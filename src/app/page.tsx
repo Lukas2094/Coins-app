@@ -44,7 +44,7 @@ export default async function Home({ searchParams }: Busca) {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-5xl font-bold mb-4">Principais Criptomoedas por Capitalização de Mercado</h1>
+      <h1 className="text-4xl font-bold mb-4">Principais Criptomoedas por Capitalização de Mercado</h1>
       <CryptoTable cryptosIniciais={cryptosIniciais} pagina={pagina} />
 
       <div className="flex justify-center mt-4">

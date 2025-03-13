@@ -65,13 +65,13 @@ export default function CryptoTable({ cryptosIniciais, pagina }: CryptoTableProp
             <table className="min-w-full bg-white">
                 <thead>
                     <tr className="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
-                        <th className="py-3 px-6 text-left">Criptomoeda</th>
-                        <th className="py-3 px-6 text-left">Símbolo</th>
-                        <th className="py-3 px-6 text-left">Preço</th>
-                        <th className="py-3 px-6 text-left">Capitalização de Mercado</th>
-                        <th className="py-3 px-6 text-left">Volume (24h)</th>
-                        <th className="py-3 px-6 text-left">Variação (24h)</th>
-                        <th className="py-3 px-6 text-left">Gráfico (7 dias)</th>
+                        <th className="py-2 px-2 text-left">Criptomoeda</th>
+                        <th className="py-2 px-2 text-left">Símbolo</th>
+                        <th className="py-2 px-2 text-left">Preço</th>
+                        <th className="py-2 px-2 text-left">Capitalização de Mercado</th>
+                        <th className="py-2 px-2 text-left">Volume (24h)</th>
+                        <th className="py-2 px-2 text-left">Variação (24h)</th>
+                        <th className="py-2 px-2 text-left">Gráfico (7 dias)</th>
                     </tr>
                 </thead>
                 <tbody className="text-gray-600 text-sm font-light">
